@@ -250,16 +250,27 @@ cat a | grep asd | wc -l
 
 ## vi
 i insert
+
 ESC
+
 :q
+
 sair sem gravar :q!
+
 escrever ficheiro write :w
+
 escrever e sair :wq
+
 delete x
+
 replace r
+
 apagar linha dd
+
 apagar 3 linhas 3dd
+
 abre uma nova linha e abre edicao o
+
 abre uma nova linha antes O
 
 
@@ -292,3 +303,85 @@ tar --list --verbose --file=backup.tar
 ```
 -cjvf
 ```
+
+## gzip e bzip2
+bzip2 mais lento mas mais compressao
+
+### gzip
+comprimir ficheiro e apagar original
+```
+gzip ficheiro.txt
+```
+
+nao apagar ficheiro original
+```
+gzip -k ficheiro.gz
+```
+
+listar detalhes
+```
+gzip -l ficheiro.gz
+```
+
+teste de integridade
+```
+gzip -tv ficheiro.gz
+```
+
+force
+```
+gzip -f ficheiro.gz
+```
+
+gzip recursisamente
+```
+gzip -r *
+```
+
+
+concatenar ficheiros.gz
+```
+gzip -c file1.txt > files.gz
+gzip -c file2.txt >> files.gz
+```
+
+
+
+
+descomprimir ficheiro
+```
+gzip -d ficheiro.gz	
+gunzip ficheiro.gz
+gunzip -c file.gz > file.txt
+```
+
+### bzip2
+```
+bzip2 list.txt
+bzip2 list.txt list1.txt list2.txt
+```
+
+descomprimir ficheiro bz2
+```
+bzip2 -d list.txt.bz2
+bunzip2 list.txt.bz2
+```
+
+por padrao os ficheiros originais sao apagados -k para nao apagar
+```
+bzip2 -k ficheiro.bz2
+```
+
+
+## dd
+/dev/null
+/dev/zero escreve zero
+/dev/random gerar numeros
+
+dd if=/dev/zero of=abc bs=1M count=10
+
+dd if=/dev/zero of=/dev/sda bs=1M count=10
+zerar primeiros 10 megas
+
+formatar sda primeiros 10 megas
+dd if=/dev/random of=/dev/sda bs=1M count=10
