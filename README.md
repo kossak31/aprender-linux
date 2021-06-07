@@ -378,10 +378,69 @@ bzip2 -k ficheiro.bz2
 /dev/zero escreve zero
 /dev/random gerar numeros
 
+```
 dd if=/dev/zero of=abc bs=1M count=10
+```
 
-dd if=/dev/zero of=/dev/sda bs=1M count=10
 zerar primeiros 10 megas
+```
+dd if=/dev/zero of=/dev/sda bs=1M count=10
+```
 
 formatar sda primeiros 10 megas
+```
 dd if=/dev/random of=/dev/sda bs=1M count=10
+```
+
+bc
+```
+echo 4+4 | bc
+```
+
+calendario
+```
+cal
+```
+
+data
+```
+date
+```
+
+
+disk usage
+```
+du
+```
+
+desligar sistena
+```
+shutdown
+```
+
+reiniciar sistema
+```
+reboot
+```
+
+suspender programa por x tempo
+```
+sleep
+```
+
+descarrega ficheiros por http e ftp
+```
+wget
+```
+
+historico da linha de comandos
+```
+history
+history -c
+history -d <nº de linha>
+```
+
+tempo de actividade
+```
+uptime
+```
