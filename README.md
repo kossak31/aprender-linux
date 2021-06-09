@@ -444,3 +444,21 @@ tempo de actividade
 ```
 uptime
 ```
+
+## apt
+
+| Command | Description |
+| --- | --- |
+| `update` | update dos ultimos pacotes |
+| `upgrade` | upgrade de pacotes |
+| `install` | instalar os pacotes |
+| `remove` | remove apenas ficheiros binarios e deixa as configuracoes |
+| `purge` | remove tudo relacionado com o pacote incluido os ficheiros de configuracao |
+| `full-upgrade` novo `dist-upgrade` | actualiza a distribuição pela mais recente |
+| `search` | procura pelo pacote |
+| `show` | mostra info sobre o pacote |
+| `autoremove` ou `auto-remove` | remove pacotes sem dependecias |
+| `auto-clean` | remove pacotes em cache |
+| `apt-key list` | lista as chaves dos repositorios |
+| `apt-key del` | remove chaves dos repositorios |
+| `apt-file` | para procurar ficheiros usados util para bibliotecas |
