@@ -559,3 +559,46 @@ sudo systemctl enable --now videos.automount
 ```
 
 verificar se foi correctamente montado, utilizando o comando mount
+
+
+
+## Secure Shell
+O Secure Shell é um protocolo de rede (cifrado) que permite o acesso remoto a máquinas de forma segura, num
+paradigma de cliente-servidor. O serviço dá acesso a um terminal remoto para a
+execução de comandos.
+
+instalar serviço de ssh
+```
+sudo apt install openssh-server
+```
+
+
+O ficheiro de configuração sshd_config
+```
+/etc/ssh/sshd_config
+```
+
+opções para alterar
+```
+Port
+ListenAddress
+PermitRootLogin
+PasswordAuthentication
+UseDNS
+```
+
+iniciar o serviço
+```
+systemctl stop,start,status,restart
+```
+
+instalar cliente ssh
+```
+sudo apt install openssh-client
+```
+
+para estabelecer uma ligação na porta 22
+```
+ssh username@servername
+```
+
