@@ -462,3 +462,45 @@ uptime
 | `apt-key list` | lista as chaves dos repositorios |
 | `apt-key del` | remove chaves dos repositorios |
 | `apt-file` | para procurar ficheiros usados util para bibliotecas |
+
+
+
+## gerir partições
+
+permite listar todos os dispositivos orientados ao bloco
+```
+lsblk
+```
+
+permite manipular partições e podemos utilizá-lo para verificar que partições existem e se são MBR ou GPT
+```
+parted
+```
+
+
+
+permitem gerir as partições em MBR e GPT
+```
+fdisk e gdisk
+```
+
+formatar partições utilizando o formato ext4
+```
+mkfs.ext4
+```
+
+
+permite montar uma partição numa determinada pasta do sistema operativo de forma manual
+```
+mount
+```
+
+verificar espaço disponivel
+```
+df
+```
+
+permite fazer unmount do sistema de ficheiros
+```
+umount
+```
