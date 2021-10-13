@@ -504,3 +504,58 @@ permite fazer unmount do sistema de ficheiros
 ```
 umount
 ```
+
+
+
+
+em vez de utilizamos /dev/sdb1 podemos utilizar "videos"
+```
+sudo tune2fs -L videos /dev/sdb1
+```
+
+
+verificar as várias informações de uma partição através da opção -l
+```
+sudo tune2fs -l /dev/sdb1
+```
+
+ponto de montagem
+```
+sudo mkdir /videos
+```
+
+
+criação dos ficheiros de cońfiguração do systemd
+
+## criar ficheiro videos.mount
+/etc/systemd/system/videos.mount
+
+```
+[Unit]
+Description=Mount unit for videos
+[Mount]
+What=LABEL=videos
+Where=/videos
+Type=ext4
+Options=defaults
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
+videos.automount
+```
+[Automount]
+Where=/videos
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable --now videos.automount
+```
+
+verificar se foi correctamente montado, utilizando o comando mount
